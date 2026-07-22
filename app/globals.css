@@ -102,103 +102,103 @@ img { max-width: 100%; height: auto; }
   color: #5040ae !important;
   font-weight: 700 !important;
 }
-.page-team .wsite-section-elements > h2:first-child { margin-bottom: 54px; }
-.page-team .wsite-multicol-table-wrap { margin: 0 0 38px !important; }
-.page-team .wsite-multicol-table,
-.page-team .wsite-multicol-tbody { display: block; width: 100%; }
-.page-team .wsite-multicol-tr {
+.team-section { padding-top: 48px; border-top: 1px solid var(--line); }
+.team-section + .team-section { margin-top: 104px; }
+.team-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 76px 46px;
+  gap: 68px 46px;
   align-items: start;
   justify-items: center;
 }
-.page-team .wsite-multicol-col {
+.team-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100% !important;
   min-width: 0;
-  padding: 0 !important;
+  text-align: center;
 }
-.page-team .wsite-multicol-col:not(:has(.wsite-image)) { display: none; }
-.page-team .platform-element-contents,
-.page-team .porthole-box,
-.page-team .porthole-box-content,
-.page-team .wsite-image,
-.page-team .wsite-image > a { width: 100%; }
-.page-team .wsite-multicol-col > div,
-.page-team .wsite-multicol-col > div > div,
-.page-team .wsite-multicol-col > div > div > div { width: 100%; }
-.page-team .wsite-image {
+.team-photo {
   width: 300px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
-  margin: 0 auto 18px !important;
-  padding: 0 !important;
+  margin: 0 auto 18px;
   overflow: hidden;
   background: #e5e2dc;
-  border-radius: 0;
 }
-.page-team .wsite-image img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
+.team-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 18%;
   filter: saturate(.9) contrast(1.02);
 }
-.page-team .wsite-multicol-col font {
-  font-size: inherit !important;
+.team-photo-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: #615a71;
+  background: #e5e2dc;
+  font-family: var(--serif);
+  font-size: 56px;
 }
-.page-team .wsite-multicol-col h2.wsite-content-title {
-  margin: 0 0 18px;
+.team-name {
+  margin: 0 0 14px;
   font-family: var(--sans);
-  font-size: clamp(24px, 2.2vw, 34px);
+  font-size: clamp(22px, 2vw, 29px);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0;
-  text-align: center !important;
   color: #565656;
 }
-.page-team .paragraph {
-  width: min(100%, 390px);
+.team-name a { color: #6f5fc0 !important; }
+.team-position {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.team-affiliation {
   color: #565656;
-  font-size: 18px;
-  line-height: 1.55;
-  text-align: center !important;
-}
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements > h2.wsite-content-title {
-  color: var(--purple-deep);
-  text-align: center !important;
-}
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 54px 34px;
-}
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements > h2 {
-  grid-column: 1 / -1;
-  width: 100%;
-}
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements > div:has(.wsite-multicol),
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-multicol,
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-multicol-table-wrap,
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-multicol-table,
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-multicol-tbody,
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-multicol-tr {
-  display: contents;
-}
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-image {
-  width: 225px;
-  max-width: 100%;
-}
-.page-team > div > .wsite-section-wrap:nth-of-type(n+3) .paragraph {
-  width: min(100%, 286px);
   font-size: 16px;
   line-height: 1.55;
 }
-.page-team .paragraph strong { color: var(--ink); }
+.team-affiliation p { margin: 0; }
+.team-affiliation p:last-child { font-style: italic; }
+.team-section-title {
+  margin: 0 0 14px;
+  color: var(--purple-deep);
+  font-family: var(--serif);
+  font-size: clamp(29px, 3.5vw, 45px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -.018em;
+  text-align: center;
+}
+.team-alumni-note {
+  max-width: 720px;
+  margin: 0 auto 54px;
+  color: #b43b35;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+.team-grid-alumni {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 54px 34px;
+}
+.team-grid-alumni .team-photo {
+  width: 225px;
+}
+.team-grid-alumni .team-name { font-size: 21px; }
+.team-grid-alumni .team-position,
+.team-grid-alumni .team-affiliation { font-size: 14px; }
 
 .site-footer { color: #dcd8ef; background: #24203c; }
 .footer-inner { width: min(1120px, calc(100% - 56px)); min-height: 230px; margin: auto; padding: 58px 0; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
@@ -218,10 +218,10 @@ img { max-width: 100%; height: auto; }
   .profile-links { grid-template-columns: 1fr 1fr; }
   .profile-links a:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .profile-links a:nth-child(4) { border-top: 1px solid var(--line); }
-  .page-team .wsite-multicol-tr { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 58px 38px; }
-  .page-team .wsite-image { width: 340px; max-width: 100%; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 30px; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-image { width: 260px; max-width: 100%; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 58px 38px; }
+  .team-photo { width: 340px; }
+  .team-grid-alumni { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 30px; }
+  .team-grid-alumni .team-photo { width: 260px; }
 }
 
 @media (max-width: 720px) {
@@ -239,19 +239,17 @@ img { max-width: 100%; height: auto; }
   .legacy-content { padding: 58px 0 76px; overflow-wrap: anywhere; }
   .legacy-content .wsite-multicol-table, .legacy-content .wsite-multicol-tbody, .legacy-content .wsite-multicol-tr, .legacy-content .wsite-multicol-col { display: block; width: 100% !important; }
   .legacy-content .wsite-multicol-col { padding: 8px 0 !important; }
-  .page-team .wsite-multicol-tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 22px; }
-  .page-team .wsite-multicol-col { display: flex; margin-bottom: 0; padding: 0 !important; }
-  .page-team .wsite-image { width: 260px; max-width: 100%; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 20px; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-image { width: 220px; max-width: 100%; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .paragraph { width: min(100%, 230px); }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 22px; }
+  .team-photo { width: 260px; }
+  .team-grid-alumni { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 20px; }
+  .team-grid-alumni .team-photo { width: 220px; }
   .page-data .wsite-multicol-col { padding: 20px !important; border: 0; margin-bottom: 12px; }
   .footer-inner { min-height: 250px; align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 440px) {
-  .page-team .wsite-multicol-tr { grid-template-columns: 1fr; }
-  .page-team .wsite-image { width: 300px; max-width: 100%; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-section-elements { grid-template-columns: 1fr; }
-  .page-team > div > .wsite-section-wrap:nth-of-type(n+3) .wsite-image { width: 260px; max-width: 100%; }
+  .team-grid,
+  .team-grid-alumni { grid-template-columns: 1fr; }
+  .team-photo { width: 300px; }
+  .team-grid-alumni .team-photo { width: 260px; }
 }

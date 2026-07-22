@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "team:member": "node scripts/update-team-member.mjs"
   },
   "dependencies": {
     "@types/node": "^24.0.0",

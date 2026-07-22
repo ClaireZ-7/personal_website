@@ -1,0 +1,360 @@
+[
+  {
+    "name": "Yifan FU",
+    "position": "Visiting PhD Student",
+    "affiliation": [
+      "College of Management and Economics",
+      "Tianjin University"
+    ],
+    "group": "team",
+    "image": "/assets/weixin-image-20250910160408-12.png"
+  },
+  {
+    "name": "Qiuxia GAO",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Real Estate",
+      "NUS"
+    ],
+    "group": "team",
+    "image": "/assets/wechatimg755.jpeg"
+  },
+  {
+    "name": "Ruihua GUO",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Real Estate",
+      "NUS"
+    ],
+    "group": "team",
+    "image": "/assets/ruihua-guo.jpeg"
+  },
+  {
+    "name": "Kloe NG",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Real Estate",
+      "NUS"
+    ],
+    "group": "team",
+    "image": "/assets/kloe-ng.jpeg",
+    "link": "https://bschool.nus.edu.sg/real-estate/wp-content/uploads/sites/70/2026/06/kloen_cv26.pdf"
+  },
+  {
+    "name": "Shuangshuang SONG",
+    "position": "Visiting PhD Student",
+    "affiliation": [
+      "College of Public Finance and Investment",
+      "Shanghai University of Finance and Economics"
+    ],
+    "group": "team",
+    "image": "/assets/song.jpg"
+  },
+  {
+    "name": "Minh Hoang LE",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Architecture",
+      "NUS"
+    ],
+    "group": "team",
+    "image": "/assets/img-1512.jpeg"
+  },
+  {
+    "name": "Xiaoyang LIU",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Economics",
+      "NUS"
+    ],
+    "group": "team",
+    "image": "/assets/weixin-image-20250828105948-4.jpg"
+  },
+  {
+    "name": "Mokshya WADHWA",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Business School",
+      "National University of Singapore"
+    ],
+    "group": "team",
+    "link": "https://www.linkedin.com/in/mokshya-wadhwa-401a99160/",
+    "image": "/assets/mokshya-wadhwa.jpg"
+  },
+  {
+    "name": "Chong ZHAO",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Risk Management Institute",
+      "NUS"
+    ],
+    "group": "team",
+    "image": "/assets/img-0234.jpg"
+  },
+  {
+    "name": "Danqi CAI (Venus)",
+    "position": "Senior Manager",
+    "affiliation": [
+      "S.T. International Trading (HK) Limited"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg817.jpeg"
+  },
+  {
+    "name": "Gunjie CEN",
+    "position": "Senior Urban Designer",
+    "affiliation": [
+      "Urban Planning & Design Institute of Shenzhen"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg752.jpeg"
+  },
+  {
+    "name": "Yuqi CHANG",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Finance",
+      "NUS Business School"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg315.png"
+  },
+  {
+    "name": "Mengjun CHEN",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Economics",
+      "Rutgers, The State University of New Jersey"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg793.jpeg"
+  },
+  {
+    "name": "Lucky JIANG",
+    "position": "Senior Manager",
+    "affiliation": [
+      "Capital Markets",
+      "COFCO Land (Hong Kong)"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg746.jpeg"
+  },
+  {
+    "name": "Zhengyang LI",
+    "position": "Postdoctoral Researcher",
+    "affiliation": [
+      "Research Institute of Economics and Management",
+      "Southwestern University of Finance and Economics"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg758.jpeg"
+  },
+  {
+    "name": "Malavika TIWARI",
+    "position": "Urban Planner",
+    "affiliation": [
+      "AECOM (United States)"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg839.jpeg",
+    "link": "https://www.linkedin.com/in/malavika-tiwari-b3158b104/"
+  },
+  {
+    "name": "Shantong WANG",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Land Economy",
+      "University of Cambridge"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg748.jpeg",
+    "link": "https://liwan.work/shantong.html"
+  },
+  {
+    "name": "Xinwei WAN (Wayne)",
+    "position": "Senior Lecturer",
+    "affiliation": [
+      "Department of Banking and Finance",
+      "Monash Business School",
+      "Monash University"
+    ],
+    "group": "alumni",
+    "image": "/assets/weebly-wayne.jpeg",
+    "link": "https://xinweiwan.weebly.com/"
+  },
+  {
+    "name": "Jing WANG",
+    "position": "Research Assistant",
+    "affiliation": [
+      "MSc. in Applied Geographic Information Systems, NUS"
+    ],
+    "group": "alumni",
+    "image": "/assets/image-2023-02-07-153022113_orig.png"
+  },
+  {
+    "name": "Kendra WONG",
+    "position": "Product Operations Specialist",
+    "affiliation": [
+      "Open Government Products"
+    ],
+    "group": "alumni",
+    "image": "/assets/wong-hui-qi-kendra-portrait.jpeg",
+    "link": "https://www.linkedin.com/in/kendra-wong-hq/"
+  },
+  {
+    "name": "Liuzhen ZENG",
+    "position": "Assistant Relationship Manager",
+    "affiliation": [
+      "China Merchants Bank"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg813.jpeg"
+  },
+  {
+    "name": "Bochao ZHANG",
+    "position": "Investment Director",
+    "affiliation": [
+      "China Vanke Co., Ltd"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg770.jpeg"
+  },
+  {
+    "name": "Kankang ZHU",
+    "position": "Executive Planner",
+    "affiliation": [
+      "Active Mobility Group",
+      "Land Transport Authority (LTA), Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg806.jpeg",
+    "link": "https://www.linkedin.com/in/kankang-zhu-442507121/?originalSubdomain=sg"
+  },
+  {
+    "name": "Sahil JINDAL",
+    "position": "Management Consultant",
+    "affiliation": [
+      "Synpulse"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg801_orig.jpeg",
+    "link": "https://www.linkedin.com/in/sahiljindal1/"
+  },
+  {
+    "name": "Jiaxuan WANG",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Lee Kuan Yew Centre for Innovative Cities",
+      "Singapore University of Technology and Design"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg300-orig.jpeg",
+    "link": "https://www.linkedin.com/in/jiaxuan-wang-69855a14b/"
+  },
+  {
+    "name": "Huaying CHEN",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Institute of Real Estate and Urban Studies (IREUS)",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/image-20230322154431.jpg",
+    "link": "https://www.linkedin.com/in/vicky-chen-huaying-593749139/?originalSubdomain=sg"
+  },
+  {
+    "name": "Elliot SITOH",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Real Estate",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/1777714129.jpeg",
+    "link": "https://www.linkedin.com/in/elliot-sitoh-55125917a/?originalSubdomain=sg"
+  },
+  {
+    "name": "Lijuan CUI",
+    "position": "Visiting PhD Student",
+    "affiliation": [
+      "School of Economics",
+      "Zhejiang University"
+    ],
+    "group": "alumni",
+    "image": "/assets/20230820103518.jpg",
+    "link": "https://www.linkedin.com/in/cui-lijuan-1272b62a5/"
+  },
+  {
+    "name": "Jing TANG",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Architecture",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/cropped-image-2.png"
+  },
+  {
+    "name": "Kaize ZHU",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Lee Kuan Yew School of Public Policy",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/cropped-image.png",
+    "link": "https://www.linkedin.com/in/kaizezhu/"
+  },
+  {
+    "name": "Yixuan GE",
+    "position": "PhD Candidate",
+    "affiliation": [
+      "Department of Finance",
+      "NUS Business School"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg638.png",
+    "link": "https://www.linkedin.com/in/yixuan-g-b4963b191/"
+  },
+  {
+    "name": "Xiaoqian ZHANG",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Architecture",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/1.png"
+  },
+  {
+    "name": "Nancy DENG",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Economics",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/deng.png",
+    "link": "http://linkedin.com/in/nancy-deng-074299152"
+  },
+  {
+    "name": "Kangyi ZHANG",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Economics",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/wechatimg390-orig.jpg"
+  },
+  {
+    "name": "Qianqian CAI",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Business School",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/1_orig.png"
+  }
+]

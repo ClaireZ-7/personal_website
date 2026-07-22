@@ -43,6 +43,7 @@ function clean(fragment) {
     .replace(/href="\/?data\.html"/gi, 'href="/data/"')
     .replace(/href="\/?vacancy\.html"/gi, 'href="/vacancy/"')
     .replace(/href="\/"/gi, 'href="/"')
+    .replace(/,INTERNATIONAL EXPOSURE/gi, "INTERNATIONAL EXPOSURE")
     .replace(/<div class="wsite-spacer"[^>]*><\/div>/gi, "")
     .trim();
 }
