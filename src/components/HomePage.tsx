@@ -12,7 +12,7 @@ export function HomePage() {
         <div className="portrait-column">
           <div className="portrait-frame"><img src="/assets/57af26e7f0fd1ed242103f45f866735b_orig.jpg" alt="Yi Fan" /></div>
           <div className="document-links">
-            <a href="/assets/cv_-_yi_fan_june2026.pdf" target="_blank">Curriculum Vitae <span>↗</span></a>
+            <a href="/assets/cv_-_yi_fan_july2026.pdf" target="_blank">Curriculum Vitae <span>↗</span></a>
             <a href="/assets/short-bio_202605.pdf" target="_blank">Short Bio <span>↗</span></a>
           </div>
         </div>
@@ -20,7 +20,7 @@ export function HomePage() {
           <p className="eyebrow">Welcome to my website!</p>
           <h1>Researching how households shape a more <em>sustainable</em> future.</h1>
           <p>I am a tenured Associate Professor in the Department of Real Estate, Business School, National University of Singapore. I am working on <strong>household sustainability</strong>, a burgeoning field between sustainability and household finance.</p>
-          <p>Specifically, I am (a) investigating <strong>social sustainability</strong>—especially intergenerational mobility—from a household finance perspective, and (b) melding <strong>environmental sustainability</strong>—an important need for current and future generations—with real estate market from a lens of household.</p>
+          <p>Specifically, I am (a) investigating <strong>social sustainability</strong>—especially intergenerational mobility—from a household finance perspective, and (b) melding <strong>environmental sustainability</strong>—an important need for current and future generations—with urban development from a lens of household.</p>
           <p>In future, I am looking for interdisciplinary research with public health, engineering, and energy.</p>
         </div>
       </div>
