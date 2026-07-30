@@ -20,7 +20,7 @@ in `out/`, ready for Vercel, Alibaba Cloud OSS, or another static host.
 - 部署模式：`next.config.ts` 中的 `output: "export"`。
 - 路由格式：`trailingSlash: true`，例如 `/team/`。
 - 静态构建输出：`out/`。
-- 图片与 PDF：`public/assets/`。
+- 图片与 PDF路径：`public/assets/`。
 
 Next.js 官方说明：启用 `output: "export"` 后，`next build` 会将每个路由输出为
 静态文件，并生成 `out/` 目录。参见
@@ -59,7 +59,7 @@ npx serve out
 
 开发时使用 `npm run dev`；部署前必须至少运行一次 `npm run build`。
 
-### 3. 每个页面在哪里修改
+### 3. 页面修改
 
 | 页面或内容 | 浏览地址 | 修改位置 |
 | --- | --- | --- |
@@ -88,7 +88,7 @@ HTML，不应再修改 `generated-content.ts` 中遗留的 `team` 数据。
 
 ### 4. 修改 Team 信息
 
-完整请见 `TEAM_MAINTENANCE.md`。推荐使用维护命令，而不是手动修改页面组件。
+推荐使用维护命令，而不是手动修改页面组件。
 
 #### 新增成员
 
@@ -113,12 +113,12 @@ npm run team:member -- \
 - `--link`：可选；姓名链接，可指向个人主页、LinkedIn 或 CV。
 
 当前 Team 会自动排列：职位包含 `PhD` 的成员在前，`Research Assistant` 在后，
-每组按姓名最后一个单词，即 surname，按英文字母排序。
+每组按 surname 字母序排序。
 
 #### 将 Team 成员移入 Alumni
 
 ```bash
-npm run team:member -- --name "Qiuxia GAO" --group alumni
+npm run team:member -- --name "Memmber NAME" --group alumni
 ```
 
 已有照片、链接、职位和学院会保留。
@@ -129,7 +129,7 @@ npm run team:member -- --name "Qiuxia GAO" --group alumni
 
 ```bash
 npm run team:member -- \
-  --name "member name" \
+  --name "member NAME" \
   --photo "/photo/path.jpg"
 ```
 
@@ -178,21 +178,10 @@ npm run team:member -- --name "Member NAME" --remove-link true
 非生产分支通常生成 Preview，生产分支生成 Production。参见
 [Vercel Next.js deployment guide](https://vercel.com/academy/ai-summary-app-with-nextjs/deploy-the-app)。
 
-#### 第一次部署
-
-1. 在本地确认 `npm run build` 成功。
-2. 将项目提交并推送到 GitHub。
-3. 登录 Vercel，选择 **Add New → Project**。
-4. 导入对应的 GitHub 仓库。
-5. Framework Preset 选择或确认 **Next.js**。
-6. Root Directory 保持 `./`。
-7. Build Command 使用 `npm run build`，Install Command 使用 `npm ci` 或默认值。
-8. 不要手动覆盖 Output Directory，让 Vercel 的 Next.js Preset 处理静态导出。
-9. 选择 **Deploy**，完成后逐页检查 `/research/`、`/team/`、`/data/` 和 404 页面。
-
-本项目当前不需要环境变量。
 
 #### 后续更新
+
+github 进行改动后，推送到远程仓库将自动更新部署。
 
 ```bash
 git add -A
@@ -200,103 +189,8 @@ git commit -m "Update website content"
 git push origin main
 ```
 
-Vercel 会自动构建并发布 `main` 分支。发布失败时，先在 Vercel 的 Build Logs 中检查
-Node.js 版本和 `npm run build` 输出。
+Vercel 会自动构建并发布 `main` 分支。发布失败时，先在 Vercel 的 Build Logs 中检查 Node.js 版本和 `npm run build` 输出。
 
-#### 自定义域名
-
-1. 打开 Vercel 项目的 **Settings → Domains**。
-2. 添加根域名和/或 `www` 子域名。
-3. 在域名 DNS 服务商处填写 Vercel 当前页面显示的 A、CNAME 或 TXT 记录。
-4. 不要硬编码旧教程中的 DNS 值；以项目 Domains 页面给出的值为准。
-5. 等待域名验证和 HTTPS 证书签发，再测试 HTTP 到 HTTPS 和根域名到 `www` 的跳转。
-
-官方说明：
-[Vercel custom domains](https://vercel.com/docs/domains/working-with-domains/add-a-domain)。
-
-### 6. 阿里云部署方案
-
-本项目是多页面静态导出，架构为：
-
-```text
-访客 → 自定义域名 / 可选 CDN → 阿里云 OSS → out/ 静态文件
-```
-
-#### 备案与区域选择
-
-- OSS Bucket 位于中国大陆并使用自定义域名时，需要完成 ICP 备案。
-- 已备案主域名的子域名通常无需单独备案，但仍需按阿里云要求完成域名绑定。
-- 如果暂时没有备案，可选择香港或其他非中国大陆区域，但大陆访问速度和稳定性应实测。
-
-参见阿里云官方的
-[OSS ICP filing requirements](https://help.aliyun.com/en/icp-filing/basic-icp-service/product-overview/use-oss)。
-
-#### 创建并配置 OSS
-
-1. 在阿里云 OSS 控制台创建一个专门用于公开网站的 Bucket。
-2. 选择 **Standard** 存储类型；区域应与目标访问地区匹配。
-3. 进入 **数据管理 / Data Management → 静态页面 / Static Page**。
-4. Default Homepage 设置为 `index.html`。
-5. 开启 Subfolder Homepage，因为本项目会生成 `team/index.html` 等子目录首页。
-6. Subfolder 404 Rule 选择 **Redirect**，使 `/team` 能跳转到 `/team/`。
-7. Default 404 Page 设置为 `404.html`，Error Page Status Code 设置为 `404`。
-8. 按 OSS 静态网站要求关闭该 Bucket 的 Block Public Access，并将 Bucket ACL 设为
-   **Public Read**。该 Bucket 只能放公开网站文件，绝不能存放密钥或私密资料。
-
-以上配置对应阿里云的
-[OSS static website hosting guide](https://help.aliyun.com/en/oss/user-guide/hosting-static-websites)。
-
-#### 构建并上传
-
-```bash
-nvm use
-npm ci
-npm run build
-```
-
-方法一：在 OSS 控制台进入 **Object Management → Objects**，上传 `out/` 内的所有内容，
-注意上传的是 `out/` 的内容，不是在 Bucket 根目录再创建一层 `out`。
-
-方法二：安装并配置 `ossutil` 后上传：
-
-```bash
-ossutil cp -r out/ oss://YOUR_BUCKET_NAME/ --update
-```
-
-`--update` 只上传不存在或较新的文件。它不会自动删除云端已废弃的旧文件，改名或删除页面后
-应在 OSS 中检查残留对象。命令参数参见
-[ossutil cp documentation](https://help.aliyun.com/en/oss/developer-reference/upload-objects-6)。
-
-#### 域名、HTTPS 与 CDN
-
-1. 在 OSS 中绑定已备案的自定义域名；不要把 OSS 默认 Bucket 域名作为正式网站地址。
-2. 在 DNS 中将网站域名指向 OSS 控制台提供的目标地址。
-3. 为自定义域名配置 HTTPS 证书，并开启 HTTP 到 HTTPS 跳转。
-4. 需要更好的大陆访问速度时，可为该域名启用阿里云 CDN，并将 OSS 设为源站。
-5. 每次发布后，如 CDN 仍显示旧页面，执行 URL/目录刷新或等待缓存过期。
-
-#### 阿里云后续发布流程
-
-```bash
-nvm use
-npm run build
-ossutil cp -r out/ oss://YOUR_BUCKET_NAME/ --update
-```
-
-发布后至少检查：首页、`/team/`、`/research/`、图片、PDF、外部链接、移动端菜单和
-不存在页面的 404 状态。
-
-### 7. 发布前检查清单
-
-- `npm run build` 成功且没有 TypeScript 错误。
-- 首页、Research、Teaching、Team、Data 和 Vacancy 页面可访问。
-- Team 中 PhD/RA 顺序、照片裁切、姓名链接正确。
-- CV、Short Bio、论文附录和其他 PDF 可以打开。
-- 桌面端和手机端没有文字或图片重叠。
-- 自定义域名、HTTPS、404 和重定向正常。
-- 阿里云大陆区域已完成所需备案，OSS Bucket 中没有任何私密文件。
-
----
 
 ## English Guide
 
@@ -307,7 +201,7 @@ ossutil cp -r out/ oss://YOUR_BUCKET_NAME/ --update
 - Deployment mode: `output: "export"` in `next.config.ts`.
 - URL format: `trailingSlash: true`, for example `/team/`.
 - Static build output: `out/`.
-- Images and PDFs: `public/assets/`.
+- Images and PDFs path: `public/assets/`.
 
 With `output: "export"`, `next build` emits static files for every route into
 `out/`. See the official
@@ -376,8 +270,7 @@ legacy `team` HTML in `generated-content.ts`.
 
 ### 4. Update Team information
 
-The extended guide is also available in `TEAM_MAINTENANCE.md`. The maintenance
-command is preferred over editing the page component.
+The maintenance command is preferred over editing the page component.
 
 #### Add a member
 
@@ -408,7 +301,7 @@ in the name, treated as the surname.
 #### Move a current member to Alumni
 
 ```bash
-npm run team:member -- --name "Qiuxia GAO" --group alumni
+npm run team:member -- --name "Member NAME" --group alumni
 ```
 
 The existing photo, link, position, and affiliation are retained.
@@ -461,25 +354,14 @@ placeholder.
 
 ### 5. Vercel deployment
 
-GitHub-connected Vercel deployment is the recommended workflow. Vercel detects
+The workflow is GitHub-connected Vercel deployment. Vercel detects
 Next.js automatically and creates deployments for Git pushes. See the official
 [Vercel Next.js deployment guide](https://vercel.com/academy/ai-summary-app-with-nextjs/deploy-the-app).
 
-#### First deployment
-
-1. Confirm that `npm run build` succeeds locally.
-2. Commit and push the repository to GitHub.
-3. In Vercel, choose **Add New → Project**.
-4. Import the GitHub repository.
-5. Confirm the **Next.js** Framework Preset.
-6. Keep Root Directory as `./`.
-7. Use `npm run build` as Build Command and `npm ci` or the detected default as Install Command.
-8. Do not override Output Directory; let Vercel's Next.js preset handle the static export.
-9. Deploy, then test `/research/`, `/team/`, `/data/`, assets, and the 404 page.
-
-No environment variables are currently required.
 
 #### Subsequent updates
+
+After Git pushes, the website is automatically deployed.
 
 ```bash
 git add -A
@@ -487,96 +369,4 @@ git commit -m "Update website content"
 git push origin main
 ```
 
-Vercel rebuilds and publishes the production branch automatically. Use Vercel's
-Build Logs to diagnose Node.js or build failures.
-
-#### Custom domain
-
-1. Open **Project Settings → Domains**.
-2. Add the apex domain and/or `www` subdomain.
-3. Add the A, CNAME, or TXT records currently shown by Vercel at the DNS provider.
-4. Do not copy stale DNS values from tutorials; use the values shown for this project.
-5. Wait for verification and HTTPS certificate issuance, then test redirects.
-
-See [Vercel custom domains](https://vercel.com/docs/domains/working-with-domains/add-a-domain).
-
-### 6. Alibaba Cloud deployment
-
-The recommended architecture for this static multi-page export is:
-
-```text
-Visitor → custom domain / optional CDN → Alibaba Cloud OSS → out/ files
-```
-
-#### Region and ICP filing
-
-- A custom domain serving content from an OSS bucket in the Chinese mainland requires ICP filing.
-- A subdomain of an already filed apex domain normally does not need a separate filing, subject to Alibaba Cloud's binding requirements.
-- A Hong Kong or other non-mainland region can be used without mainland hosting, but mainland performance should be tested.
-
-See the official
-[OSS ICP filing requirements](https://help.aliyun.com/en/icp-filing/basic-icp-service/product-overview/use-oss).
-
-#### Create and configure OSS
-
-1. Create a dedicated public-website bucket in the OSS console.
-2. Use the Standard storage class and select a suitable region.
-3. Open **Data Management → Static Page**.
-4. Set Default Homepage to `index.html`.
-5. Enable Subfolder Homepage because the export contains paths such as `team/index.html`.
-6. Set Subfolder 404 Rule to **Redirect**, so `/team` redirects to `/team/`.
-7. Set Default 404 Page to `404.html` and Error Page Status Code to `404`.
-8. Following OSS static-hosting requirements, disable Block Public Access for this bucket and set its ACL to **Public Read**. Store public website assets only; never upload secrets or private documents.
-
-See the
-[OSS static website hosting guide](https://help.aliyun.com/en/oss/user-guide/hosting-static-websites).
-
-#### Build and upload
-
-```bash
-nvm use
-npm ci
-npm run build
-```
-
-Console method: open **Object Management → Objects** and upload the contents of
-`out/` to the bucket root. Do not create an extra top-level `out` directory.
-
-CLI method after installing and configuring `ossutil`:
-
-```bash
-ossutil cp -r out/ oss://YOUR_BUCKET_NAME/ --update
-```
-
-`--update` uploads missing or newer files but does not delete obsolete remote files.
-After renaming or deleting pages, check OSS for stale objects. See the official
-[ossutil cp documentation](https://help.aliyun.com/en/oss/developer-reference/upload-objects-6).
-
-#### Domain, HTTPS, and CDN
-
-1. Bind a filed custom domain to OSS; do not use the default bucket endpoint as the production website URL.
-2. Point the DNS record to the target shown in the OSS console.
-3. Configure an HTTPS certificate and redirect HTTP to HTTPS.
-4. Optionally enable Alibaba Cloud CDN with OSS as the origin for better mainland delivery.
-5. Purge relevant CDN URLs/directories after deployment when old content remains cached.
-
-#### Subsequent Alibaba Cloud releases
-
-```bash
-nvm use
-npm run build
-ossutil cp -r out/ oss://YOUR_BUCKET_NAME/ --update
-```
-
-After publishing, test the homepage, `/team/`, `/research/`, images, PDFs, external
-links, mobile navigation, and a non-existent URL returning the intended 404 page.
-
-### 7. Pre-release checklist
-
-- `npm run build` succeeds without TypeScript errors.
-- Home, Research, Teaching, Team, Data, and Vacancy are reachable.
-- Team ordering, photo crops, names, and links are correct.
-- CV, Short Bio, appendices, and other PDFs open correctly.
-- Desktop and mobile layouts have no overlapping text or images.
-- Custom domain, HTTPS, 404 handling, and redirects work.
-- Required ICP filing is complete for mainland Alibaba Cloud hosting, and the OSS bucket contains no private files.
+Vercel rebuilds and publishes the production branch automatically. Use Vercel's Build Logs to diagnose Node.js or build failures.
