@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { contentBySlug } from "@/generated-content";
 import { pageTitles } from "@/site";
 import TeamPage from "@/components/TeamPage";
-import { applyMediaCoverage } from "@/media-coverage";
+import MediaTalkPage from "@/components/MediaTalkPage";
+import { removeInternationalExposure } from "@/media-coverage";
 
 export function generateStaticParams() { return Object.keys(pageTitles).map((slug) => ({ slug })); }
 
@@ -14,9 +15,10 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
 
 export default async function ContentPage({ params }: { params: Promise<{slug: string}> }) {
   const { slug } = await params;
+  if (slug === "media-talk") return <MediaTalkPage />;
   let content = contentBySlug[slug];
   if (!content) notFound();
   if (slug === "team") return <TeamPage />;
-  if (slug === "research") content = applyMediaCoverage(content);
+  if (slug === "research") content = removeInternationalExposure(content);
   return <article className={`legacy-content page-${slug}`} dangerouslySetInnerHTML={{ __html: content }} />;
 }
