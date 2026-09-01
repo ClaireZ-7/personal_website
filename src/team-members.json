@@ -61,16 +61,6 @@
     "image": "/assets/img-1512.jpeg"
   },
   {
-    "name": "Xiaoyang LIU",
-    "position": "Research Assistant",
-    "affiliation": [
-      "Department of Economics",
-      "NUS"
-    ],
-    "group": "team",
-    "image": "/assets/weixin-image-20250828105948-4.jpg"
-  },
-  {
     "name": "Mokshya WADHWA",
     "position": "Research Assistant",
     "affiliation": [
@@ -82,14 +72,24 @@
     "image": "/assets/mokshya-wadhwa.jpg"
   },
   {
-    "name": "Chong ZHAO",
+    "name": "Wendi ZHAI",
     "position": "Research Assistant",
     "affiliation": [
-      "Department of Risk Management Institute",
-      "NUS"
+      "Department of Economics",
+      "National University of Singapore"
     ],
     "group": "team",
-    "image": "/assets/img-0234.jpg"
+    "image": "/assets/zhaiwendy.jpg"
+  },
+  {
+    "name": "Chuyue ZHAO",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Economics",
+      "National University of Singapore"
+    ],
+    "group": "team",
+    "image": "/assets/chuyuezhao.jpg"
   },
   {
     "name": "Danqi CAI (Venus)",
@@ -356,5 +356,25 @@
     ],
     "group": "alumni",
     "image": "/assets/1_orig.png"
+  },
+  {
+    "name": "Xiaoyang LIU",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Economics",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/weixin-image-20250828105948-4.jpg"
+  },
+  {
+    "name": "Chong ZHAO",
+    "position": "Research Assistant",
+    "affiliation": [
+      "Department of Risk Management Institute",
+      "National University of Singapore"
+    ],
+    "group": "alumni",
+    "image": "/assets/img-0234.jpg"
   }
 ]

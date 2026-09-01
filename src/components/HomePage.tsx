@@ -12,7 +12,7 @@ export function HomePage() {
         <div className="portrait-column">
           <div className="portrait-frame"><img src="/assets/57af26e7f0fd1ed242103f45f866735b_orig.jpg" alt="Yi Fan" /></div>
           <div className="document-links">
-            <a href="/assets/cv_-_yi_fan_july2026.pdf" target="_blank">Curriculum Vitae <span>↗</span></a>
+            <a href="/assets/CV - Yi FAN_August2026.pdf" target="_blank">Curriculum Vitae <span>↗</span></a>
             <a href="/assets/short-bio_202605.pdf" target="_blank">Short Bio <span>↗</span></a>
           </div>
         </div>

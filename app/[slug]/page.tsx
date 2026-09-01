@@ -4,6 +4,7 @@ import { contentBySlug } from "@/generated-content";
 import { pageTitles } from "@/site";
 import TeamPage from "@/components/TeamPage";
 import MediaTalkPage from "@/components/MediaTalkPage";
+import VacancyPage from "@/components/VacancyPage";
 import { removeInternationalExposure } from "@/media-coverage";
 
 export function generateStaticParams() { return Object.keys(pageTitles).map((slug) => ({ slug })); }
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
 export default async function ContentPage({ params }: { params: Promise<{slug: string}> }) {
   const { slug } = await params;
   if (slug === "media-talk") return <MediaTalkPage />;
+  if (slug === "vacancy") return <VacancyPage />;
   let content = contentBySlug[slug];
   if (!content) notFound();
   if (slug === "team") return <TeamPage />;
