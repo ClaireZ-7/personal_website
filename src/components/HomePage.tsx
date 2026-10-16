@@ -12,7 +12,7 @@ export function HomePage() {
         <div className="portrait-column">
           <div className="portrait-frame"><img src="/assets/57af26e7f0fd1ed242103f45f866735b_orig.jpg" alt="Yi Fan" /></div>
           <div className="document-links">
-            <a href="/assets/CV - Yi FAN_August2026.pdf" target="_blank">Curriculum Vitae <span>↗</span></a>
+            <a href="/assets/CV - Yi FAN_Oct2026.pdf" target="_blank">Curriculum Vitae <span>↗</span></a>
             <a href="/assets/short-bio_202605.pdf" target="_blank">Short Bio <span>↗</span></a>
           </div>
         </div>
@@ -28,7 +28,7 @@ export function HomePage() {
     <section className="home-details">
       <div className="details-grid">
         <div><p className="section-label">Research Fields</p><p className="large-copy">Urban Economics, Labor Economics, Household Finance</p></div>
-        <div><p className="section-label">Current Appointments</p><p>Associate Professor, 07/2024 - present<br/>PhD Program Coordinator, 07/2024 - present</p></div>
+        <div><p className="section-label">Current Appointments</p><p>Associate Professor, 07/2024 - present<br/>PhD Program Coordinator, 07/2024 - present<br/>Faculty PhD Committee Member, 07/2024 - present</p></div>
       </div>
       <div className="info-block">
         <p className="section-label">Editorialship</p>
@@ -36,11 +36,15 @@ export function HomePage() {
       </div>
       <div className="info-block">
         <p className="section-label">Organizer</p>
-        <ul><li><a href="https://sites.google.com/view/rnim-seminar">Research Network on Intergenerational Mobility</a> (founding member)</li><li><a href="https://sites.google.com/view/economicseminar/home">Applied Economics Workship</a> (NUS, UTokyo, NTU Taiwan, HKUST, NTU Singapore, HKU, Academia Sinica, and Hitotsubashi)</li></ul>
+        <ul><li><a href="https://sites.google.com/view/rnim-seminar">Research Network on Intergenerational Mobility</a> (founding member)</li><li><a href="https://sites.google.com/view/economicseminar/home">Applied Economics Workshop</a> (NUS, UTokyo, NTU Taiwan, HKUST, NTU Singapore, HKU, Academia Sinica, and Hitotsubashi)</li></ul>
+      </div>
+      <div className="info-block">
+        <p className="section-label">Recognition</p>
+        <p>Top 6% Economists in Asia and Top 10% Economists globally, based on the past 10 years&apos; publications as of September 2026 (IDEAS/RePEc).</p>
       </div>
       <div className="info-block">
         <p className="section-label">Selected Awards</p>
-        <ul><li>Homer Hoyt Best Paper Award, Asian Real Estate Society - Global Chinese Real Estate Congress Joint International Real Estate Conference 2023</li><li>Competitive NUS Humanities and Social Sciences Faculty Research Fellowship 2022</li><li>Competitive NUS Business School Teaching Excellence Award 2021</li><li>Best Paper Award, Global Chinese Real Estate Congress Annual Conference 2019</li></ul>
+        <ul><li>Long Service Award (10 Years), NUS 2025</li><li>Homer Hoyt Best Paper Award, Asian Real Estate Society - Global Chinese Real Estate Congress Joint International Real Estate Conference 2023</li><li>Competitive NUS Humanities and Social Sciences Faculty Research Fellowship 2022</li><li>Competitive NUS Business School Teaching Excellence Award 2021</li><li>Best Paper Award, Global Chinese Real Estate Congress Annual Conference 2019</li></ul>
       </div>
       <div className="profile-links">{links.map(([label, href]) => <a key={label} href={href} target="_blank">{label}<span>↗</span></a>)}</div>
     </section>
